@@ -1,0 +1,46 @@
+body {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.img-center {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;   
+}
+
+.search {
+    display: block;
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+.table {
+    text-align: center;
+    border: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+}
+
+.first-block {
+    background-color: #7EE5DA;
+}
+
+.second-block {
+    background-color: #70CCC2;
+    font-size: small;
+}
+
+.third-block {
+    background-color: #62B3AA;
+    font-size: small;
+}
+
+.footer {
+    font-size: small;
+    text-align: center;
+}
+
