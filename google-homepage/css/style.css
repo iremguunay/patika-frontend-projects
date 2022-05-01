@@ -1,0 +1,226 @@
+.header {
+    list-style-type: none;
+    margin: 10px;
+    overflow: hidden;
+    margin-right: 16px;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+  }
+
+  /* Yuvarlak profil fotosu için radius'u ayarladım */
+  .profilepic {
+    border-radius: 50%;
+  }
+
+  /* Header bölümünde yan yana ve sağa dayalı olması için düzenleme yaptım*/
+  .headerli {
+    display: inline-block;
+    float: right;
+    position: relative;
+  }
+  
+  .headerli a {
+    display: block;
+    color: black;
+    text-align: text;
+    padding: 5px 5px;
+    text-decoration: none;
+  }
+
+  /* Products iconu ve profil fotoğrafının üstüne gelince 
+  arkada medyana gelen gri arkaplanı oluşturdum */
+  .button-animation a:hover {
+    background-color: #F0F0F0;
+    border-radius: 50%;
+  }
+  
+  .headerli a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    text-align: center;
+    margin: 90px;
+  }
+  
+  /* Arama yapılacak alanın kenar yarıçapını 24px olarak ayarladım. */
+  .search-area {
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    z-index: 3;
+    height: 44px;
+    margin: 0 auto;
+    margin-top: -77px;
+    width: 582px;
+    border-radius: 24px;
+  }
+  
+  /* Gölge boyutunu/rengini güncel Google sayfasına göre düzenledim. */
+  .search-area:hover {
+    box-shadow:0 1px 6px rgba(32,33,36,.28);
+  }
+  
+  .search {
+    flex: 1;
+    display: flex;
+    padding: 5px 8px 0 16px;
+    padding-left: 14px;
+  }
+  
+  .search-img {
+    display: flex;
+    align-items: center;
+    padding-right: 13px;
+    margin-top: -5px;
+  }
+  
+  .search-img span {
+    color: #9aa0a6;
+    height: 20px;
+    width: 20px;
+    margin-top: 0px;
+    display: inline-block;
+    fill: currentColor;
+    line-height: 24px;
+    position: relative;
+  }
+  
+  /* Voice-img için düzenlemeler yaptım. */
+  .voice-img {
+    display: flex;
+    align-items: center;
+    padding-right: 13px;
+    margin-top: -13px;
+  }
+  
+   /* Voice-img span için düzenlemeler yaptım. */
+  .voice-img span {
+    height: 15px;
+    width: 15px;
+    margin-top: 0px;
+    display: inline-block;
+    fill: currentColor;
+    line-height: 24px;
+    position: relative;
+  }
+
+  .input-enter {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+  
+  .input-area {
+    color: transparent;
+    flex: 100%;
+    white-space: pre;
+    font: 16px arial, sans-serif;
+    line-height: 34px;
+    height: 34px !important;
+    display: block;
+  }
+  
+  /* Input yazı alanı genişliğini 480px yaptım. */
+  .input {
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    margin-top: -68px;
+    font: 16px arial, sans-serif;
+    line-height: 34px;
+    height: 34px !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    appearance: textfield;
+    cursor: text;
+    border: none;
+    width: 480px;
+  }
+
+  /* .buttons ve .buttons button css düzenlemeleri ile butonlar istenilen biçime getirildi*/
+  .buttons {
+    padding-top: 18px;
+    text-align: center;
+  }
+
+  .buttons button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    height: 36px;
+  }
+
+  /* Butonlara gölge verildi. */
+  .buttons button:hover {
+    box-shadow:0 1px 2px rgba(32,33,36,.28);
+  }
+
+  .googlesearch {
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .feelinglucky {
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Background-color ekledim */
+  .footer {
+    background-color: #f2f2f2 ;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #dfe1e5;
+    border-top: 1px solid #dadce0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: -8px;
+    line-height: 20px;
+  }
+  
+  /*Listenin noktalarını kaldırdım*/
+  .footerli {
+    float: left;
+    list-style-type: none;
+  }
+  
+  .footerli a {
+    display: block;
+    color: #70757a;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin-left: 14px;
+    margin-right: -20px;
+  }
+  
+  .footerli a:hover {
+    text-decoration: underline;
+  }
