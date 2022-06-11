@@ -1,13 +1,17 @@
 let listDOM = document.querySelector('#list')
 //tüm görevleri içinde tutacak array
 let tasks = []
+
 //listeye yeni element eklemek için onClick newElement fonksiyonun içini doldurdum
 //text input'un içinin dolu olup olmadığını kontrol ederek success/error mesajını gösterdim 
 const newElement = () => {
     let task = document.querySelector('#task')
-    if(task.value && !(/^\s*$/.test(task.value))) { 
+    if(task.value && !(/^\s*$/.test(task.value))) {
+        tasks.push(task.value)
+        localStorage.setItem('tasks', JSON.stringify(tasks))
         addItem(task.value) 
         $('.success').toast('show') 
+        
     } else {
         $('.error').toast('show')
     }
@@ -25,7 +29,9 @@ const addItem = task => {
 //listeden görev silmek için ilgili method
 const removeItem = () => {
     let itemDOM = document.querySelector('#list .close')
-    itemDOM.parentNode.remove()
+    // local storage'dan görevi silmek için önce tasks arrayinden sildim
+    tasks.pop(itemDOM.parentNode.remove())
+    localStorage.setItem('tasks', JSON.stringify(tasks))
 }
 
 //liste ögesini yapıldı olarak işaretlemek için checked class'ı ekleme
@@ -35,3 +41,15 @@ const checkedItem = (e) => {
     }
 }
 listDOM.addEventListener('click', checkedItem)
+
+// local storage'da görev varsa listeye ekleme methodu
+const getLocalStorage = () => {
+	(localStorage.getItem('tasks')) ?
+		tasks = JSON.parse(localStorage.getItem('tasks')) :
+		tasks = [];
+	tasks.forEach(task => {
+		addItem(task)
+	})
+}
+
+getLocalStorage()
